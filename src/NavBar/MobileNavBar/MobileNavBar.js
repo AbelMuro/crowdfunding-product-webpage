@@ -16,6 +16,8 @@ function MobileNavBar(){
         if(open){
             overlayRef.current.style.display = 'block';
             setTimeout(() => {
+                if(!overlayRef.current) return;
+                if(!dialogRef.current) return;
                 overlayRef.current.style.opacity = '1'; 
                 dialogRef.current.style.transform = 'scale(1)';                
             }, 10)
@@ -24,6 +26,7 @@ function MobileNavBar(){
             overlayRef.current.style.opacity = '' ; 
             dialogRef.current.style.transform = '';   
             setTimeout(() => {
+                if(!overlayRef.current) return;
                 overlayRef.current.style.display = '';
             }, 200)
         }

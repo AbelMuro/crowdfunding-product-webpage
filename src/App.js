@@ -1,13 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar';
-import Header from './Header'
+import Content from './Content';
 import './styles.css';
 
 function App() {
     return(
         <main>
             <NavBar/>
-            <Header/>
+            <Content/>
         </main>
     )
 }
