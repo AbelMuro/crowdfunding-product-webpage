@@ -1,0 +1,99 @@
+.container{
+    position: relative;
+    top: -90px;
+    width: 730px;
+    height: 269px;
+    padding: 56px 48px 48px 48px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    grid-column: 1/3;
+}
+
+.titleOne{
+    color: #000;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.titleTwo{
+    color: #7A7A7A;
+    text-align: center;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.backButton{
+    width: 204px;
+    height: 56px;
+    border-radius: 33.5px;
+    border: none;
+    background-color: #3CB3AB;
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.backButton:hover{
+    background-color: #147A73;
+}
+
+.logo{
+    width: 56px;
+    object-fit: contain;
+    position: absolute;
+    top: -26px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.bookmarkIcon{
+    width: 56px;
+    object-fit: contain;
+}
+
+.bookmarkButton{
+    justify-self: flex-end;
+    width: 174px;
+    height: 56px;
+    border-radius: 33.5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(47, 47, 47, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #7A7A7A;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.bookmarkButton:hover .bookmarkIcon{
+    opacity: 0.5000000074505806;
+}

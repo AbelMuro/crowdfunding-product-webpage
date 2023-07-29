@@ -1,0 +1,54 @@
+.container{
+    width: 100%;
+    height: 400px;
+    background-image: url('./images/image-hero-desktop.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 48px;
+}
+
+.navbar{
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.logo{
+    width: 128px;
+    object-fit: contain;
+}
+
+.links{
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+}
+
+.link{
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.link:hover{
+    text-decoration-line: underline;
+}
+
+
+@media(max-width: 1180px){
+    .navbar{
+        width: 90%;
+    }
+}
+
+@media(max-width: 530px){
+    .container{
+        height: 300px;
+        background-image: url('./images/image-hero-desktop.jpg');
+    }
+}
