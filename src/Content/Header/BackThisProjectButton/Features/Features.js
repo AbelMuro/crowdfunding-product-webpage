@@ -1,25 +1,49 @@
-import React from 'react';
+import React, {useRef, useEffect, useContext} from 'react';
+import {Context} from '../../../../Context';
 import RadioButton from './RadioButton';
+import EnterPledge from './EnterPledge';
 import styles from './styles.module.css';
 
+function Features({rewardName, pledge, itemsLeft, desc}){
+    const containerRef = useRef();
+    const {selectedReward} = useContext(Context);
 
-//this is where i left off, i will need to make this component into a stateful component and pass the state down to the RadioButton component
-function Features(){
+    useEffect(() => {
+        if(selectedReward === rewardName)
+            containerRef.current.style.border = '2px solid #3CB3AB';
+        else
+        containerRef.current.style.border = '';
+    }, [selectedReward])
+
+    useEffect(() => {
+        if(itemsLeft === '0')
+            containerRef.current.style.opacity = '0.4';
+    }, [itemsLeft])
+
     return(
-        <div className={styles.container}>
-            <RadioButton/>
-            <p className={styles.itemsLeft}>
-                <span>
-                    101
-                </span>
-                left
-            </p>
-            <p className={styles.desc}>
-                You get an ergonomic stand made of natural bamboo. 
-                You've helped us launch our promotional campaign, 
-                and you’ll be added to a special Backer member list.
-            </p>
+        <div className={styles.container} ref={containerRef}>
+            <div className={styles.grid}>
+                <RadioButton 
+                    rewardName={rewardName}
+                    pledge={pledge}
+                    itemsLeft={itemsLeft}
+                    />
+                {itemsLeft ? 
+                    <p className={styles.itemsLeft}>
+                        <span>
+                            {itemsLeft}
+                        </span>
+                        left
+                    </p> : <></>}
+                <p className={styles.desc}>
+                    {desc}
+                </p>
+            </div>   
+            {selectedReward === rewardName ? 
+                <EnterPledge minPledge={pledge}/>
+                : <></>}         
         </div>
+
     )
 }
 
