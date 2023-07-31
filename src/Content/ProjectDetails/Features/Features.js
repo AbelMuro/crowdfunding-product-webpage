@@ -38,8 +38,7 @@ function Features({title, pledge, desc, itemsLeft}) {
             <button className={styles.rewardButton} 
                 ref={rewardRef} 
                 onClick={handleSelect} 
-                data-title={title}
-            >
+                data-title={title}>
                 {itemsLeft === '0' ? 'Out of Stock' : 'Select Reward'}
             </button>   
         </section>

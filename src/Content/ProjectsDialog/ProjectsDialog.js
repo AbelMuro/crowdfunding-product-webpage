@@ -3,7 +3,6 @@ import {Context} from '../../Context';
 import Features from './Features';
 import styles from './styles.module.css';
 
-
 function ProjectsDialog() {
     const {openProjectsDialog, setOpenProjectsDialog, setOpenThankYouDialog} = useContext(Context);
     const overlayRef = useRef();

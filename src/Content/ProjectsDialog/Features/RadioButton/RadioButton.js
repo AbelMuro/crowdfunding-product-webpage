@@ -24,7 +24,6 @@ function RadioButton({rewardName, pledge, itemsLeft}) {
             inputRef.current.disabled = true;
             containerRef.current.style.pointerEvents = 'none';
         }
-            
     }, [itemsLeft])
 
     return(
@@ -49,4 +48,4 @@ function RadioButton({rewardName, pledge, itemsLeft}) {
     )
 }
 
-export default memo(RadioButton);
+export default RadioButton;
