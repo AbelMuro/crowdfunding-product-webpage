@@ -3,7 +3,6 @@ import dollarIcon from './icons/dollar-icon.svg';
 import styles from './styles.module.css';
 
 
-//this is where i left off, i just need to position the error messages a bit better
 function EnterPledge({minPledge}) {
     const [pledge, setPledge] = useState('');
     const emptyMessageRef = useRef();
@@ -11,8 +10,9 @@ function EnterPledge({minPledge}) {
     const inputRef = useRef();
 
     const handlePledge = (e) => {
+        const userInput = e.target.value;
         e.target.setCustomValidity('');
-        setPledge(e.target.value);
+        setPledge(userInput);
     }
 
     const handleBlur = (e) => {
