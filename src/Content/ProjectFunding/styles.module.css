@@ -38,6 +38,7 @@
     height: 63px;
     opacity: 0.15000000596046448;
     background-color: #000;
+    transition: none;
 }
 
 .bar{

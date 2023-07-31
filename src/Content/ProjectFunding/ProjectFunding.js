@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
+import RangeBar from './RangeBar';
 import styles from './styles.module.css';
 
 function ProjectFunding() {
@@ -80,7 +81,7 @@ function ProjectFunding() {
                     days left
                 </p>
             </div>
-            <input type='range' className={styles.bar} defaultValue='80' disabled/>
+            <RangeBar/>
         </section>
     )
 }
