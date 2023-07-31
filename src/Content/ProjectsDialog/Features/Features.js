@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useContext} from 'react';
-import {Context} from '../../../../Context';
+import {Context} from '../../../Context';
 import RadioButton from './RadioButton';
 import EnterPledge from './EnterPledge';
 import styles from './styles.module.css';

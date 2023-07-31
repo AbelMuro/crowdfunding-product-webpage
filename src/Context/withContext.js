@@ -6,12 +6,15 @@ export default function withContext(App) {
     return () => {
         const [selectedReward, setSelectedReward] = useState('');
         const [openThankYouDialog, setOpenThankYouDialog] = useState(false);
+        const [openProjectsDialog, setOpenProjectsDialog] = useState(false);
 
         const value = {
             selectedReward,
             setSelectedReward,
             openThankYouDialog,
             setOpenThankYouDialog,
+            openProjectsDialog,
+            setOpenProjectsDialog
         }
 
         return(

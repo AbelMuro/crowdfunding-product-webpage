@@ -1,9 +1,17 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useContext} from 'react';
+import {Context} from '../../../Context';
 import styles from './styles.module.css';
 
 function Features({title, pledge, desc, itemsLeft}) {
+    const {setOpenProjectsDialog, setSelectedReward} = useContext(Context)
     const containerRef = useRef();
     const rewardRef = useRef();
+
+    const handleSelect = (e) => {
+        const title = e.target.getAttribute('data-title');
+        setSelectedReward(title);
+        setOpenProjectsDialog(true);
+    }
 
     useEffect(() => {
         if(Number(itemsLeft) <= 0){
@@ -11,8 +19,6 @@ function Features({title, pledge, desc, itemsLeft}) {
             rewardRef.current.style.backgroundColor = 'rgba(47, 47, 47, 0.5)';
             rewardRef.current.disabled = true;
         }
-            
-        
     }, [itemsLeft])
 
     return(
@@ -29,7 +35,11 @@ function Features({title, pledge, desc, itemsLeft}) {
             <div className={styles.itemsLeft}>
                 <span>{itemsLeft}</span> left
             </div>
-            <button className={styles.rewardButton} ref={rewardRef}>
+            <button className={styles.rewardButton} 
+                ref={rewardRef} 
+                onClick={handleSelect} 
+                data-title={title}
+            >
                 {itemsLeft === '0' ? 'Out of Stock' : 'Select Reward'}
             </button>   
         </section>

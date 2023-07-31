@@ -1,16 +1,21 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect, useContext} from 'react';
+import {Context} from '../../Context';
 import bookmark from './icons/icon-bookmark.svg';
 import bookmarkGreen from './icons/icon-bookmark-green.svg';
-import BackThisProjectButton from './BackThisProjectButton';
 import logo from './icons/logo-mastercraft.svg';
 import styles from './styles.module.css';
 
 function Header() {
-    const [isBookmarked, setIsBookmarked] = useState(false)
+    const {setOpenProjectsDialog} = useContext(Context);
+    const [isBookmarked, setIsBookmarked] = useState(false);
     const bookmarkRef = useRef();
 
     const handleBookmark = () => {
         setIsBookmarked(!isBookmarked);
+    }
+
+    const handleOpen = () => {
+        setOpenProjectsDialog(true);
     }
 
     useEffect(() => {
@@ -48,7 +53,9 @@ function Header() {
                     A beautiful & handcrafted monitor stand to reduce neck and eye strain.
                 </h2>
             </div>
-            <BackThisProjectButton/>
+            <button className={styles.backButton} onClick={handleOpen}>
+                Back this project
+            </button>   
             <button className={styles.bookmarkButton} onClick={handleBookmark} ref={bookmarkRef}>
                 <img className={styles.bookmarkIcon} src={isBookmarked ? bookmarkGreen : bookmark}/>
                 Bookmark

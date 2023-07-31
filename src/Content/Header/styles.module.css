@@ -37,6 +37,26 @@
 }
 
 
+.backButton{
+    width: 204px;
+    height: 56px;
+    border-radius: 33.5px;
+    border: none;
+    background-color: #3CB3AB;
+    color: #FFF;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+
+.backButton:hover{
+    background-color: #147A73;
+}
+
 .logo{
     width: 56px;
     object-fit: contain;

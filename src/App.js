@@ -2,8 +2,9 @@ import React from 'react';
 import NavBar from './NavBar';
 import Content from './Content';
 import withContext from './Context';
-import './styles.css';
 import ThankYouDialog from './Content/ThankYouDialog';
+import ProjectsDialog from './Content/ProjectsDialog';
+import './styles.css';
 
 function App() {
     return(
@@ -11,6 +12,7 @@ function App() {
             <NavBar/>
             <Content/>
             <ThankYouDialog/>
+            <ProjectsDialog/>
         </main>
     )
 }

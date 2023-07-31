@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useContext, memo} from 'react'
-import {Context} from '../../../../../Context';
+import {Context} from '../../../../Context';
 import styles from './styles.module.css';
 
 function RadioButton({rewardName, pledge, itemsLeft}) {

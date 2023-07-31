@@ -1,22 +1,3 @@
-.backButton{
-    width: 204px;
-    height: 56px;
-    border-radius: 33.5px;
-    border: none;
-    background-color: #3CB3AB;
-    color: #FFF;
-    font-family: var(--font);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    cursor: pointer;
-}
-
-
-.backButton:hover{
-    background-color: #147A73;
-}
 
 .overlay{
     display: none;
@@ -48,6 +29,7 @@
     border-radius: 8px;
 }
 
+
 .close{
     mask-image: url('./icons/icon-close-modal.svg');
     -webkit-mask-image: url('./icons/icon-close-modal.svg');
@@ -67,6 +49,7 @@
 .close:hover{
     background-color: rgba(0, 0, 0);
 }
+
 
 .title{
     color: #000;

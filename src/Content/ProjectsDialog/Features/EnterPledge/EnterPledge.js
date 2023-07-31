@@ -3,6 +3,8 @@ import dollarIcon from './icons/dollar-icon.svg';
 import styles from './styles.module.css';
 
 
+
+//this is where i left off,
 function EnterPledge({minPledge}) {
     const [pledge, setPledge] = useState('');
     const emptyMessageRef = useRef();
